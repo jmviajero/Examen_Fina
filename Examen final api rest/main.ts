@@ -3,10 +3,13 @@ import express from "npm:express@4.18.2"
 
 const MONGO_URL = Deno.env.get("MONGO_URL");
 
-if (!MONGO_URL){
-  throw new Error("url no adecuada");
-   MONGO_URL="mongodb+srv://jmviajero:12345@cluster0.mfoc843.mongodb.net/TARDIS?retryWrites=true&w=majority"
+
+  
+if(!MONGO_URL){
+    console.error("No se proporcionó una URL válida para MongoDB");
+    MONGO_URL="mongodb+srv://jmviajero:12345@cluster0.mfoc843.mongodb.net/TARDIS?retryWrites=true&w=majority"
 }
+
 
 
 try {
