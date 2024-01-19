@@ -1,7 +1,7 @@
 import mongoose from "npm:mongoose@8.0.1"
 import express from "npm:express@4.18.2"
 
-const MONGO_URL = Deno.env.get("MONGO_URL");
+let MONGO_URL = Deno.env.get("MONGO_URL");
 
 
   
